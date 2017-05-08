@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bookbook.research.fragmentscanner.Scanner">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+    <LinearLayout
+
+        android:id="@+id/scan_enter_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan or Type ISBN"
+            android:id="@+id/scan_book_label_textView"
+            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:src="@android:drawable/ic_menu_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doneImageView"
+                android:layout_alignParentRight="true"
+                android:gravity="right" />
+
+            <EditText
+                android:layout_toLeftOf="@id/doneImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="TYPE ISBN"
+                android:id="@+id/isbnEditText"
+                android:layout_gravity="center_horizontal" />
+
+
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true">
+
+            <com.bookbook.research.fragmentscanner.camera.CameraSourcePreview
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.bookbook.research.fragmentscanner.camera.GraphicOverlay
+                    android:id="@+id/graphicOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+
+            </com.bookbook.research.fragmentscanner.camera.CameraSourcePreview>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>
